@@ -36,10 +36,8 @@
             <h2>Solicitar Consulta - $99.99 USD</h2>
             <p class="section-subtitle">Complete el formulario para agendar su consulta jurídica</p>
             
-            <form name="pago-consulta" method="POST" netlify data-netlify-honeypot="bot-field" class="form-pago">
-                <p style="display: none;">
-                    <label>No llenar esto: <input name="bot-field" /></label>
-                </p>
+            <form name="pago-consulta" method="POST" data-netlify-honeypot="bot-field" netlify class="form-pago">
+                <input type="hidden" name="bot-field">
                 <div class="form-group">
                     <label for="nombre">Nombre *</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
@@ -135,10 +133,8 @@
             <h2>Formulario de Contacto</h2>
             <p class="section-subtitle">Comuníquese con nosotros para más información</p>
 
-<form name="contacto" method="POST" netlify data-netlify-honeypot="bot-field-contact" class="form-contacto">
-                <p style="display: none;">
-                    <label>No llenar esto: <input name="bot-field-contact" /></label>
-                </p>
+<form name="contacto" method="POST" data-netlify-honeypot="bot-field-contact" netlify class="form-contacto">
+                <input type="hidden" name="bot-field-contact">
 
                 <div class="form-group">
                     <label for="contact-nombre">Nombre Completo *</label>
