@@ -37,6 +37,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Validar que código postal contenga solo números
+    const codigoPostal = document.getElementById('codigopostal');
+    if (codigoPostal) {
+        codigoPostal.addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+    }
+
+    // Formatear Seguro Social (hasta 11 caracteres: 000-00-0000)
+    const seguroSocial = document.getElementById('seguroSocial');
+    if (seguroSocial) {
+        seguroSocial.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 9) value = value.substring(0, 9);
+            if (value.length > 5) {
+                value = value.replace(/(\d{3})(\d{2})(\d{1,4})/, '$1-$2-$3');
+            } else if (value.length > 3) {
+                value = value.replace(/(\d{3})(\d{1,2})/, '$1-$2');
+            }
+            e.target.value = value;
+        });
+    }
+
     const contactPhone = document.getElementById('contact-telefono');
     if (contactPhone) {
         contactPhone.addEventListener('input', function(e) {

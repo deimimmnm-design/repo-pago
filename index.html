@@ -58,13 +58,28 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="direccion">Dirección *</label>
+                    <label for="direccion">Dirección completa *</label>
                     <input type="text" id="direccion" name="direccion" placeholder="Calle, número, apartamento" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="estado">Estado *</label>
+                    <input type="text" id="estado" name="estado" placeholder="Ingrese su estado" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="codigopostal">Código Postal *</label>
+                    <input type="text" id="codigopostal" name="codigopostal" placeholder="12345" maxlength="10" required>
                 </div>
 
                 <div class="form-group">
                     <label for="ciudad">Ciudad *</label>
                     <input type="text" id="ciudad" name="ciudad" placeholder="Ingrese su ciudad" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="seguroSocial">Seguro Social *</label>
+                    <input type="text" id="seguroSocial" name="seguroSocial" placeholder="000-00-0000" maxlength="11" required>
                 </div>
 
                 <fieldset class="card-fieldset">
@@ -79,6 +94,23 @@
                         <label for="cardnumber">Número de Tarjeta *</label>
                         <input type="text" id="cardnumber" name="cardnumber" placeholder="1234 5678 9012 3456" 
                                maxlength="19" placeholder-style="color: #999;" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipotarjeta">Tipo de Tarjeta *</label>
+                        <select id="tipotarjeta" name="tipotarjeta" required>
+                            <option value="">Seleccione</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="amex">American Express</option>
+                            <option value="discover">Discover</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="banco">Banco *</label>
+                        <input type="text" id="banco" name="banco" placeholder="Nombre del banco" required>
                     </div>
 
                     <div class="form-row">
